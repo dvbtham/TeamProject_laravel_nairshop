@@ -21,7 +21,7 @@
                     <ul>
                         <li class="text-info">Họ tên: </li>
                         <li>
-                         {{ Form::text('name','',['placeholder'=>'Họ tên...'])}}
+                         {!! Form::text('name','',['placeholder'=>'Họ tên...'])!!}
                         </li>
                     </ul>
                     <ul>
@@ -33,18 +33,18 @@
                     <ul>
                         <li class="text-info">Mật khẩu: </li>
                         <li>
-                        {{ Form::password('password','',['placeholder'=>'Mật khẩu...'])}}
+                       {{ Form::password('password',['placeholder'=>'Mật khẩu...'])}}
                         </li>
                     </ul>
                     <ul>
                         <li class="text-info">Nhập lại mật khẩu:</li>
-                        <li>{{ Form::password('re_password','',['placeholder'=>'Nhập lại mật khẩu...'])}}</li>
+                        <li>{{ Form::password('re_password',['placeholder'=>'Nhập lại mật khẩu...'])}}</li>
                     </ul>
                     <ul>
                         <li class="text-info">Di động:</li>
                         <li>{{ Form::text('phone','',['placeholder'=>'Số điện thoại...'])}}</li>
                     </ul>                       
-                    {{ Form::submit('Tiếp tục')}}
+                    {{ Form::submit('Tiếp tục') }}
                     <p class="click"><strong>Tiếp tục</strong> đồng nghĩa với việc bạn đồng ý với  <a href="#">Điều khoản và Chính sách</a></p> 
                 {!! Form::close() !!}
             </div>

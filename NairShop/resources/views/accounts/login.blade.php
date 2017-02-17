@@ -23,7 +23,7 @@
                                  <h5>Tên đăng nhập:</h5>    
                                  {{ Form::text('username','',['placeholder'=>'Tên đăng nhập...'])}}
                                  <h5>Mật khẩu:</h5>
-                                 {{ Form::password('password','',['placeholder'=>'Mật khẩu...'])}}
+                                 {{ Form::password('password',['placeholder'=>'Mật khẩu...'])}}
                                  <br>                   
                                 {{ Form::submit('Đăng nhập')}}
 
