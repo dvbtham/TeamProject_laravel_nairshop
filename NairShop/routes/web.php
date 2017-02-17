@@ -26,3 +26,6 @@ Route::get('login', function () {
 Route::get('signup', function () {
     return view('accounts.signup');
 });
+Route::get('myadmin', function () {
+    return view('admin.pages.dashboard');
+});
