@@ -26,6 +26,22 @@ Route::get('login', function () {
 Route::get('signup', function () {
     return view('accounts.signup');
 });
-Route::get('myadmin', function () {
-    return view('admin.pages.dashboard');
+
+Route::get('/myadmin', function ()    {
+        return view('admin.pages.dashboard');
+});
+Route::get('brand/index',"BrandController@index");
+
+Route::get('brand/create', "BrandController@getCreate");
+Route::post('brand/create', "BrandController@postCreate");
+
+Route::group(['middleware' => 'auth'], function () {
+    // Route::get('/myadmin', function ()    {
+    //     return view('admin.pages.dashboard');
+    // });
+
+    Route::get('user/profile', function () {
+        // Uses Auth Middleware
+    });
+   
 });
