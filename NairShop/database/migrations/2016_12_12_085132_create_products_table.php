@@ -30,6 +30,7 @@ class CreateProductsTable extends Migration
             $table->string('tags');
             $table->integer('viewed');
             $table->boolean('actived');
+            $table->boolean('is_deleted');
 
             //foreign key
 

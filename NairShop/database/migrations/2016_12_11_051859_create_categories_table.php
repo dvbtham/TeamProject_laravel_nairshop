@@ -21,6 +21,7 @@ class CreateCategoriesTable extends Migration
             $table->string('image');
             $table->string('description');
             $table->boolean('active');
+            $table->boolean('is_deleted');
             $table->timestamps();
         });
     }
