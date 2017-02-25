@@ -6,7 +6,8 @@
   <title>@yield("admin_title") | Nair /admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  @include("admin.partials._scripts")
+  @include("admin.partials._styles")
+  @yield('styles')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -54,6 +55,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    @include('admin.partials._message')
     @yield("admin_content")
   </div>
   <!-- /.content-wrapper -->
@@ -61,6 +63,8 @@
  @include("admin.partials._asideOption")
 </div>
 <!-- ./wrapper -->
- @include("admin.partials._styles")
+
+  @include("admin.partials._scripts")
+ @yield('scripts')
 </body>
 </html>

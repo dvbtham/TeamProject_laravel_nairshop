@@ -32,7 +32,3 @@
 <script src="/admin/plugins/fastclick/fastclick.js"></script>
 <!-- /adminLTE App -->
 <script src="/admin/dist/js/app.min.js"></script>
-<!-- /adminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/admin/dist/js/pages/dashboard.js"></script>
-<!-- /adminLTE for demo purposes -->
-<script src="/admin/dist/js/demo.js"></script>

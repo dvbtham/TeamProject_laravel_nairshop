@@ -2,7 +2,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="/myadmin">
+          <a href="/myadmin/home">
             <i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span>
           </a>
         </li>
@@ -29,7 +29,7 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/myadmin/user/index"><i class="fa fa-user"></i> Người dùng</a></li>
+                        <li><a href="/myadmin/users"><i class="fa fa-user"></i> Người dùng</a></li>
                         <li><a href="application_groups"><i class="fa fa-users"></i> Nhóm người dùng</a></li>
                         <li><a href="application_roles"><i class="fa fa-get-pocket"></i> Quyền</a></li>
                     </ul>
