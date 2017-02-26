@@ -22,7 +22,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        
         return View('admin.pages.users.create');
     }
     /**
