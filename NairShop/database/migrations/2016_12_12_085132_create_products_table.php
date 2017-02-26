@@ -23,12 +23,9 @@ class CreateProductsTable extends Migration
             $table->decimal('unit_price');
             $table->decimal('price');
             $table->decimal('discount');
-            $table->integer('sku');
-            $table->integer('units_on_order');
             $table->string('meta_keyword');
             $table->string('meta_description');
             $table->string('tags');
-            $table->integer('viewed');
             $table->boolean('actived');
             $table->boolean('is_deleted');
 
