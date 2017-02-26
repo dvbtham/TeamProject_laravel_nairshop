@@ -17,11 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('alias');
-<<<<<<< HEAD
-            $table->integer('parent_id');
-=======
             $table->integer('parent_id')->nullable(true);
->>>>>>> 23c87e880e2df90f5202a0b5cd4b5c2a428cee84
             $table->string('description');
             $table->boolean('actived');
             $table->boolean('is_deleted');
