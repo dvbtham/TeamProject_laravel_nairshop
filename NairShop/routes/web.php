@@ -37,4 +37,5 @@ Route::post('brand/create', "BrandController@postCreate");
 Route::group(['prefix'=>'/myadmin'],function(){
    Route::get('/home','HomeController@getDashboard');
    Route::resource('users', 'UserController');
+   Route::resource('cates', 'CateController');
 });
