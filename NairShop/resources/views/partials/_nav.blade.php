@@ -5,9 +5,7 @@
                     <a href="/">N-AIR</a>
                 </div>
                 <div class="login-bars">
-                    {{-- <a class="btn btn-default log-bar" href="signup" role="button">Đăng ký</a>
-                    <a class="btn btn-default log-bar" href="login" role="button">Đăng nhập</a> --}}
-
+                    
                     @if (Auth::guest())
                            <a href="{{ url('/login') }}" class="btn btn-default log-bar">Đăng nhập</a></li>
                            <a href="{{ url('/register') }}" class="btn btn-default log-bar">Đăng ký</a></li>
@@ -45,58 +43,33 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                <!---menu-----bar--->
-                <div class="header-botom">
-                    <div class="content white">
-                    <nav class="navbar navbar-default nav-menu" role="navigation">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="clearfix"></div>
-                        <!--/.navbar-header-->
+              
 
                         <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav nav-font">
                                 <li class="{{ Request::is('/') ? "active" : ""}}">
                                     <a href="/">Trang chủ</a>
                                 </li>
+                                
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Danh mục<b class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-column columns-3">
-                                        <div class="row">
-                                            <div class="col-sm-4 menu-img-pad">
-                                                <ul class="multi-column-dropdown">
-                                                    <li><a href="products.html">Joggers</a></li>
-                                                    <li><a href="products.html">Foot Ball</a></li>
-                                                    <li><a href="products.html">Cricket</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="products.html">Tennis</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="products.html">Casual</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4 menu-img-pad">
-                                                <a href="#"><img src="images/menu1.jpg" alt="/" class="img-rsponsive men-img-wid" /></a>
-                                            </div>
-                                            <div class="col-sm-4 menu-img-pad">
-                                                <a href="#"><img src="images/menu2.jpg" alt="/" class="img-rsponsive men-img-wid" /></a>
-                                            </div>
-                                        </div>
+                                    <ul class="dropdown-menu">
+                                      @foreach($cates as $cate )
+                                         <li class="{{ Request::is('danh-muc') ? "active" : ""}}">
+                                         <a href="/danh-muc/{{$cate->id}}">{{$cate->name}}</a>
+                                         </li>
+                                      @endforeach 
+                                        
                                     </ul>
                                 </li>
-                                <li class="{{ Request::is('shop') ? "active" : ""}}">
-                                    <a href="shop">Cửa hàng</a>
+                                <li class="{{ Request::is('san-pham') ? "active" : ""}}">
+                                    <a href="/san-pham">Sản phẩm</a>
                                 </li>
                                 <li class="{{ Request::is('about') ? "active" : ""}}">
-                                    <a href="about" >Giới thiệu</a>
+                                    <a href="/about" >Giới thiệu</a>
                                 </li>
                                 <li class="{{ Request::is('contact') ? "active" : ""}}">
-                                    <a href="contact">Liên hệ</a>
+                                    <a href="/contact">Liên hệ</a>
                                 </li>
                                 <div class="clearfix"></div>
                             </ul>

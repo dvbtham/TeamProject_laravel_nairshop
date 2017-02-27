@@ -83,7 +83,7 @@
                         @endforeach
                         
                     </table>
-                    <ul class="paginationn">
+                    <ul class="pagination">
                         {!! $prods->links(); !!}
                     </ul>
                 </div>

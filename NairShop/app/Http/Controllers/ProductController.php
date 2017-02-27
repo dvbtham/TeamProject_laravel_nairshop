@@ -24,6 +24,8 @@ class ProductController extends Controller
         return View('admin.pages.products.index',['prods'=> $prods]);
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      *

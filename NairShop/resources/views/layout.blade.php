@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <!--bootstrap-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--coustom css-->
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
     
 </head>
 <body>
@@ -25,11 +25,11 @@
     @include('partials._footer')
 
     <!--shop-kart-js-->
-    <script src="js/simpleCart.min.js"></script>
+    <script src="/js/simpleCart.min.js"></script>
     <!--default-js-->
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
     <!--bootstrap-js-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!--script-->
     @yield('scripts')
 </body>
