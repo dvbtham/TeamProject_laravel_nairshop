@@ -5,8 +5,33 @@
                     <a href="/">N-AIR</a>
                 </div>
                 <div class="login-bars">
-                    <a class="btn btn-default log-bar" href="signup" role="button">Đăng ký</a>
-                    <a class="btn btn-default log-bar" href="login" role="button">Đăng nhập</a>
+                    {{-- <a class="btn btn-default log-bar" href="signup" role="button">Đăng ký</a>
+                    <a class="btn btn-default log-bar" href="login" role="button">Đăng nhập</a> --}}
+
+                    @if (Auth::guest())
+                           <a href="{{ url('/login') }}" class="btn btn-default log-bar">Đăng nhập</a></li>
+                           <a href="{{ url('/register') }}" class="btn btn-default log-bar">Đăng ký</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Đăng xuất
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                     <div class="cart box_1">
                         <a href="checkout.html">
                             <h3>

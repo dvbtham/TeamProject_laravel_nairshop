@@ -31,7 +31,8 @@
                         {{Form::text('name',null,['class'=>'form-control','placeholder'=>'nhập tên danh mục','required' =>'','maxlength'=>'250','minlength'=>'6'])}}
                         <br/>
                         {{ Form::label('parent_id', 'Tên danh mục cha: ') }}
-                        {{ Form::text('parent_id',$cate->parent_id,['class'=>'form-control', 'placeholder'=>'nhập tên danh mục cha'])}}
+                        {{Form::label('parent_id','Danh mục cha: ')}}
+                       {{ Form::select('parent_id', $cates, null, ['class'=>'form-control','placeholder' => 'Chọn danh mục']) }}
                         <br/>
                         {{Form::label('description','Mô tả: ')}}
                         {{Form::textarea('description',null,['class'=>'form-control','placeholder'=>'','required' =>'','maxlength'=>'250','minlength'=>'6'])}}

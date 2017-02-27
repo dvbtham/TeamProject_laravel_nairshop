@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('alias');
             $table->string('intro');
-            $table->text('content');
             $table->string('image');
             $table->decimal('unit_price');
             $table->decimal('price');
@@ -31,11 +30,11 @@ class CreateProductsTable extends Migration
 
             //foreign key
 
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')
             ->on('users')->onDelete('cascade');
 
-            $table->integer('category_id')->unsigned();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')
             ->on('categories')->onDelete('cascade');
 

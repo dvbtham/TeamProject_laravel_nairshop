@@ -30,7 +30,8 @@ class CateController extends Controller
      */
     public function create()
     {
-        return View('admin.pages.cates.create');
+        $cates = Category::pluck('name','id');
+        return View('admin.pages.cates.create',['cates'=>$cates]);
     }
 
     /**
@@ -78,7 +79,8 @@ class CateController extends Controller
     public function edit($id)
     {
         $cate = Category::find($id);
-        return View('admin.pages.cates.edit')->withCate($cate);
+         $cates = Category::pluck('name','id');
+        return View('admin.pages.cates.edit',['cate'=>$cate,'cates'=>$cates]);
     }
 
     /**
@@ -90,6 +92,7 @@ class CateController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         $cate = Category::find($id);
         $this->validate($request, [
         'name' => 'required|max:250',

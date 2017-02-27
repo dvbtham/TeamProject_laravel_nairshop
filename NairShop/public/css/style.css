@@ -960,7 +960,7 @@ input#amount {
     margin: 0 0 10px 0;
     font-family: 'Open Sans', sans-serif;
 }
-.log form input[type="text"], .log form input[type="password"] {
+.log form input[type="text"], .log form input[type="password"], .log form input[type="email"] {
     width: 70%;
     padding: 8px;
     font-size: 14px;

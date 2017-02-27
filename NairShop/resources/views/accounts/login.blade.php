@@ -19,9 +19,10 @@
                              <div class="strip"></div>
 
                              <p>Xin chào, vui lòng nhập đầy đủ thông tin tài khoản ở phía dưới để tiếp tục.</p>
-                             {!! Form::open(['url' => 'login','method'=>'post']) !!}
-                                 <h5>Tên đăng nhập:</h5>    
-                                 {{ Form::text('username','',['placeholder'=>'Tên đăng nhập...'])}}
+                             {!! Form::open(['url' => '/login','method'=>'post']) !!}
+                                {{ csrf_field() }}
+                                 <h5>Email:</h5>    
+                                 {{ Form::email('email','',['placeholder'=>'Email...'])}}
                                  <h5>Mật khẩu:</h5>
                                  {{ Form::password('password',['placeholder'=>'Mật khẩu...'])}}
                                  <br>                   

@@ -16,9 +16,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/slide/index"><i class="fa fa-sliders"></i> Nhà cung cấp</a></li>
                         <li><a href="{{route("cates.index")}}"><i class="fa fa-behance-square"></i> Danh mục sản phẩm</a></li>
-                        <li><a href="/brand/index"><i class="fa fa-shopping-cart"></i> Sản phẩm</a></li>
+                        <li><a href="{{route("products.index")}}"><i class="fa fa-shopping-cart"></i> Sản phẩm</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
